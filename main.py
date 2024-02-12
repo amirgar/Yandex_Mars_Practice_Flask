@@ -79,5 +79,40 @@ def promotion_image():
                 </html>"""
 
 
+@app.route("/choice/<planet_name>")
+def plan_name(planet_name):
+    return f"""<!doctype html>
+                    <html lang="ru">
+                      <head>
+                        <meta charset="utf-8">
+                        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+                        <link rel="stylesheet" 
+                        href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" 
+                        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" 
+                        crossorigin="anonymous">
+                        <title>Привет, Марс!</title>
+                      </head>
+                      <body>
+                        <h1>Мое предложение: {planet_name}</h1>
+                        <h3>Эта планета является идеальным туристическим маршрутом</h3>
+                        <div class="alert alert-primary" role="alert">
+                        <br> На ней много необходимых ресурсов
+                        </div>
+                        <div class="alert alert-primary" role="alert">
+                        <br> На ней есть вода и атмосфера
+                        </div>
+                        <div class="alert alert-primary" role="alert">
+                        <br> На ней есть небольшое магнитное поле
+                        </div>
+                        <div class="alert alert-primary" role="alert">
+                        <br> Наконец она просто красива!
+                        </div>
+                        <div class="alert alert-primary" role="alert">
+                        <br> Присоединяйся!
+                        </div>
+                      </body>
+                    </html>"""
+
+
 if __name__ == '__main__':
     app.run(port=8080, host='127.0.0.1')
